@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - InovaCell </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>InovaCell</h1>
+        <p>Entre na sua conta!</p>
+    </header>
+
+    <section class="login">
+        <h2>Fazer Login</h2>
+
+        <form onsubmit="entrar(event)">
+            <label>E-mail:</label>
+            <input type="email" id="email" placeholder="Digite seu e-mail" required>
+
+            <label>Senha:</label>
+            <input type="password" id="senha" placeholder="Digite sua senha" required>
+
+            <button type="submit">Entrar</button>
+        </form>
+
+        <p>Ainda não tem conta?</p>
+        <a href="cadastro.html">Cadastre-se</a>
+
+        <br><br>
+        <a href="index.html">Voltar para a loja</a>
+    </section>
+
+    <script>
+        function entrar(event) {
+            event.preventDefault();
+
+            let email = document.getElementById("email").value;
+            let senha = document.getElementById("senha").value;
+
+            if (email && senha) {
+                alert("Login realizado com sucesso!");
+                window.location.href = "compra.html";
+            }
+        }
+    </script>
+
+</body>
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>InovaCell</h1>
+        <p>Finalize sua compra!</p>
+    </header>
+
+   
+
+    <section class="compra">
+        <h2>Dados da Compra</h2>
+
+        <form onsubmit="finalizarCompra(event)">
+
+            <label>Nome completo:</label>
+            <input type="text" id="nome" placeholder="Digite seu nome" required>
+
+            <label>E-mail:</label>
+            <input type="email" id="email" placeholder="Digite seu e-mail" required>
+
+            <label>Produto:</label>
+            <select id="produto" required>
+                <option value="">Selecione um produto</option>
+                <option>Iphone14</option>
+                <option>Iphone15</option>
+                <option>motog 85</option>
+                <option>Iphone16</option>
+               
+            </select>
+
+         
+
+            <label>Quantidade:</label>
+            <input type="number" id="quantidade" min="1" value="1" required>
+
+            <label>Endereço de entrega:</label>
+            <input type="text" id="endereco" placeholder="Digite seu endereço" required>
+
+            <label>Forma de pagamento:</label>
+            <select id="pagamento" required>
+                <option value="">Selecione</option>
+                <option>Pix</option>
+                <option>Cartão de crédito</option>
+                <option>Cartão de débito</option>
+                <option>Dinheiro</option>
+            </select>
+
+            <button type="submit">Finalizar Compra</button>
+
+        </form>
+    </section>
+
+    <script>
+        function finalizarCompra(event) {
+            event.preventDefault();
+
+            let nome = document.getElementById("nome").value;
+            let produto = document.getElementById("produto").value;
+            let quantidade = document.getElementById("quantidade").value;
+            let tamanho = document.getElementById("tamanho").value;
+            let pagamento = document.getElementById("pagamento").value;
+
+            alert(
+                "Compra realizada com sucesso!\n\n" +
+                "Cliente: " + nome +
+                "\nProduto: " + produto +
+                "\nQuantidade: " + quantidade +
+                "\nTamanho: " + tamanho +
+                "\nPagamento: " + pagamento
+            );
+
+            window.location.href = "index.html";
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+<div class="produto">
+    <img src="motog 85.jpg" alt="Motog85">
+    <h3>Motog85</h3>
+    <p>celular com alta qualidade.</p>
+    <h3>R$ 4.700,90</h3>
+    <button onclick="comprar('Motog85')">Comprar</button>
+</div>
+
+<div class="produto">
+    <img src="iphone15.jpg" alt="Iphone15">
+    <h3>Iphone15</h3>
+    <p>258GB e 12RAM.</p>
+    <h3>R$ 6.400,99</h3>
+    <button onclick="comprar('Iphone15')">Comprar</button>
+</div>
+
+<div class="produto">
+    <img src="iphone16.jpg" alt="iphone16">
+    <h3>iphone16</h3>
+    <p>qualidade e suavidade.</p>
+    <h3>R$ 7.388,10</h3>
+    <button onclick="comprar('Iphone16')">Comprar</button>
+</div>
+
+<div class="produto">
+    <img src="iphone14.jpg" alt="Tênis Esportivo">
+    <h3>iphone14</h3>
+    <p>mais espaços.</p>
+    <h3>R$ 2.390,90</h3>
+    <button onclick="comprar('Iphone14')">Comprar</button>
+</div>
+
+

@@ -1,0 +1,49 @@
+.login, .compra {
+    background-color: white;
+    width: 90%;
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+    box-sizing: border-box;
+}
+
+.login h2, .compra h2 {
+    text-align: center;
+    color: #222;
+}
+
+.login form, .compra form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login input, .compra input, .compra select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login button, .compra button {
+    background-color: #222;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login button:hover, .compra button:hover {
+    background-color: #555;
+}
+
+.login a {
+    color: #222;
+    text-decoration: none;
+}
+
+
